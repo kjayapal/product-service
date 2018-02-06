@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Product Details</title>
+<style>
+table, th, td {
+	border: 1px solid black;
+	border-spacing: 0px;
+}
+
+th, td {
+	padding: 10px;
+}
+</style>
+</head>
+<body>
+	<h2>PRODUCT DATA</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>PID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Description</th>
+				<th>Code</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="product : ${productsList}">
+				<td th:text="${product.pid}"></td>
+				<td th:text="${product.name}"></td>
+				<td th:text="${product.price}"></td>
+                <td th:text="${product.description}"></td>
+				<td th:text="${product.code}"></td>
+				<td th:text="${product.status}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
